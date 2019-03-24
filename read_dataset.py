@@ -21,4 +21,4 @@ def read_data(datapath, year, month, option, currency1, currency2):
 	plt.ylabel("Price (NTD)")
 	plt.title(filename+" "+option)
 	plt.show()
-	plt.savefig(filename+"_"+option+".png",dpi=300,format="png")	
+#	plt.savefig(filename+"_"+option+".png",dpi=300,format="png")	
