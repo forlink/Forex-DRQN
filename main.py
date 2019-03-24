@@ -1,12 +1,12 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-from read_dataset import read_data
+from config import getConfig
+from read_dataset import readData
 
-# import dataset
-datapath='data/'
-year='2019'
-month='02'
-option='Cash'
-currency1='USD'
-currency2='NTD'
-read_data(datapath, year, month, option, currency1, currency2)
+if __name__ == '__main__':
+	FLAG = getConfig()
+	
+	BuyPriceMap, SellPriceMap, Dates = readData(FLAG['datapath'], FLAG['year'], FLAG['month'], FLAG['dataType'], FLAG['currency1'], FLAG['currency2'])
+	
+#	forex = Forex(PriceMap = SellPriceMap, count = FLAG['count'])
+	
+#	RL = DeepNetwork(forex = forex, dates = dates, featureNum = featureNum, config = FLAG)
+#	RL.train()
